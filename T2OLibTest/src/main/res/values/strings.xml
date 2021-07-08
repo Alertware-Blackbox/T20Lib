@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">T20LibTest</string>
+    <string name="unknown_service">Srv</string>
+    <string name="unknown_characteristic">Chr</string>
+</resources>

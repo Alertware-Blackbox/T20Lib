@@ -1,0 +1,3 @@
+include ':T2OLibTest'
+include ':app'
+rootProject.name = "T20Lib"

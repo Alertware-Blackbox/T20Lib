@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    >
+    <TextView
+        android:id="@+id/tv"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:text="Hello World!"
+        />
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/cntct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Connect"
+                    android:background="@color/red"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/UUID_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="UUID"
+                    android:background="@color/teal_200"
+                    android:layout_marginEnd="10dp"
+                    tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/major"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Major"
+                    android:background="@color/purple_200"
+                    android:layout_marginEnd="10dp"
+                    tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/minor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Minor"
+                    android:background="@color/purple_700"
+                    android:layout_marginEnd="10dp"
+                    tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/dvc_nm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Device"
+                    android:background="@color/org"
+                    android:layout_marginEnd="10dp"
+                    tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/TX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TX Pwr"
+                    android:background="@color/purple_200"
+                    android:layout_marginEnd="10dp"
+                    tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/strt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Start Hr"
+                    android:background="@color/purple_500"
+                    android:layout_marginEnd="10dp"
+                    tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="End Hr"
+                    android:background="@color/teal_700"
+                    android:layout_marginEnd="10dp"
+                    tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/ti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TI"
+                    android:background="@color/blue"
+                    android:layout_marginEnd="10dp"
+                    tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/bmp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BMP"
+                    android:background="@color/lg_red"
+                    android:layout_marginEnd="10dp"
+                    tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/fc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reset"
+                    android:background="@color/ch_red"
+                    android:layout_marginEnd="10dp"
+                    tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/disCon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Discon"
+                    android:background="@color/teal_200"
+                    android:layout_marginEnd="10dp"
+                    tools:ignore="ButtonStyle" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+</RelativeLayout>
