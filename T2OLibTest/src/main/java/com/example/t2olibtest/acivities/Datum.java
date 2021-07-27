@@ -108,14 +108,14 @@ public class Datum extends AppCompatActivity implements BleWrapperUiCallbacks {
     //Set Data...
     public void set_UUID(String _val)
     {
-        if(WristbandConstants.hasCon&&!_val.equals("")&&_val.length()==32)
+        if(WristbandConstants.hasCon&&!_val.equals("")&&_val.length()==32&&!attributes.getFw_ver().equalsIgnoreCase("5.3"))
         {
             new SaveTask(mCon,bluetooth,WristbandConstants.UUID_chng_srvc,_val).execute();
         }
     }
     public void set_major(String _val)
     {
-        if(attributes.getFw_ver().equalsIgnoreCase("5.0")||attributes.getFw_ver().equalsIgnoreCase("5.1")) {
+        if(attributes.getFw_ver().equalsIgnoreCase("5.0")||attributes.getFw_ver().equalsIgnoreCase("5.1")||attributes.getFw_ver().equalsIgnoreCase("5.3")) {
             if (WristbandConstants.hasCon && !_val.equals("") && inRange(0,65535,Integer.parseInt(_val))) {
                 new SaveTask(mCon, bluetooth, WristbandConstants.major_updt_srvc, _val).execute();
             }
@@ -145,14 +145,14 @@ public class Datum extends AppCompatActivity implements BleWrapperUiCallbacks {
     }
     public void set_strt_hr(String _val)
     {
-        if(WristbandConstants.hasCon&&!_val.equals("")&&inRange(0,24,Integer.parseInt(_val)))
+        if(WristbandConstants.hasCon&&!_val.equals("")&&inRange(0,24,Integer.parseInt(_val))&&!attributes.getFw_ver().equalsIgnoreCase("5.3"))
         {
             new SaveTask(mCon,bluetooth,WristbandConstants.wrk_strt_srvc,_val).execute();
         }
     }
     public void set_end_hr(String _val)
     {
-        if(WristbandConstants.hasCon&&!_val.equals("")&&inRange(0,24,Integer.parseInt(_val)))
+        if(WristbandConstants.hasCon&&!_val.equals("")&&inRange(0,24,Integer.parseInt(_val))&&!attributes.getFw_ver().equalsIgnoreCase("5.3"))
         {
             new SaveTask(mCon,bluetooth,WristbandConstants.wrk_end_srvc,_val).execute();
         }
@@ -254,13 +254,13 @@ public class Datum extends AppCompatActivity implements BleWrapperUiCallbacks {
             return "NA";
     }
     public String get_Strt_hr() {
-        if(WristbandConstants.hasCon)
+        if(WristbandConstants.hasCon&&!attributes.getFw_ver().equals("5.3"))
             return attributes.getStrt_wrk()==null?"NA":attributes.getStrt_wrk();
         else
             return "NA";
     }
     public String get_End_hr() {
-        if(WristbandConstants.hasCon)
+        if(WristbandConstants.hasCon&&!attributes.getFw_ver().equals("5.3"))
             return attributes.getEnd_wrk()==null?"NA":attributes.getEnd_wrk();
         else
             return "NA";
@@ -275,7 +275,7 @@ public class Datum extends AppCompatActivity implements BleWrapperUiCallbacks {
                 return "NA";
     }
     public String get_lv_tmp() {
-        if(attributes.getFw_ver().equals("5.0"))
+        if(attributes.getFw_ver().equals("5.0")||attributes.getFw_ver().equals("5.3"))
             return "NA";
         else
             if(WristbandConstants.hasCon)
@@ -284,7 +284,7 @@ public class Datum extends AppCompatActivity implements BleWrapperUiCallbacks {
                 return "NA";
     }
     public String get_lv_humd() {
-        if(attributes.getFw_ver().equals("5.0")||attributes.getFw_ver().equals("5.1"))
+        if(attributes.getFw_ver().equals("5.0")||attributes.getFw_ver().equals("5.1")||attributes.getFw_ver().equals("5.3"))
             return "NA";
         else
             if(WristbandConstants.hasCon)

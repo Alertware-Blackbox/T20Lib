@@ -57,7 +57,7 @@ public class ValueActivity extends AppCompatActivity {
         bmp_btn=findViewById(R.id.bmp);
         fc_btn=findViewById(R.id.fc);
         attributes = new Attributes();  //1
-        datum =new Datum(this,attributes,"84:71:27:21:84:7A"); //2
+        datum =new Datum(this,attributes,"84:71:27:21:84:71"); //2
         if (Build.VERSION.SDK_INT < 23) {
             if (Constants.checkAndRequestPermissions(this)) {
                 datum.redirect(attributes);  //3
